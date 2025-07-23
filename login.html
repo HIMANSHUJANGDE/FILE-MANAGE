@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+  <title>Admin Login</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>Login</h2>
+  <h2>Admin Login</h2>
   <form id="loginForm">
-    <input type="text" id="username" placeholder="Username" required>
-    <input type="password" id="password" placeholder="Password" required>
+    <input type="text" id="username" placeholder="Username" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
     <button type="submit">Login</button>
   </form>
 
   <script>
-    const VALID_USERNAME = "admin";
-    const VALID_PASSWORD = "1234"; // You can hash & encode for basic security
-
     document.getElementById("loginForm").onsubmit = function(e) {
       e.preventDefault();
       const u = document.getElementById("username").value;
       const p = document.getElementById("password").value;
-      if (u === VALID_USERNAME && p === VALID_PASSWORD) {
-        localStorage.setItem("auth", "true");
+
+      if (u === "admin" && p === "1234") {
+        localStorage.setItem("admin", "true");
         window.location.href = "index.html";
       } else {
-        alert("Login failed.");
+        alert("Invalid credentials");
       }
     };
   </script>
