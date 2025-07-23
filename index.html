@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>File Manager</title>
+  <title>Admin Panel - File Manager</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>Upload File</h2>
+  <h2>Admin Panel</h2>
+  <button onclick="logout()">Logout</button>
+  <br><br>
+
   <input type="file" id="fileInput">
   <button onclick="uploadFile()">Upload</button>
 
-  <h2>Your Files</h2>
+  <h3>Uploaded Files</h3>
   <ul id="fileList"></ul>
 
   <script src="script.js"></script>
